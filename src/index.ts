@@ -3,6 +3,7 @@ import cors from 'cors'
 import path from 'path'
 import 'express-async-errors'
 
+//@ts-ignore
 import routesConfig from './routesConfig.js'
 // import errorHandler from './errors/handler'
 
@@ -26,4 +27,6 @@ routes.forEach(route => {
 
 // app.use(errorHandler)
 
-app.listen(3333)
+app.listen(3000, '0.0.0.0', () => {
+    console.log('Escutando na porta 3000')
+})
